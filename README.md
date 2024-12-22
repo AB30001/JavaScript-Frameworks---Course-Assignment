@@ -27,7 +27,7 @@ This pattern (Context + Reducer) is commonly used for state management in React 
 
 ## Deployment
 
---netflity link--
+[--netflity link--](https://javascript-frameworks-course-assignme.netlify.app/)
 
 ## Built With
 
