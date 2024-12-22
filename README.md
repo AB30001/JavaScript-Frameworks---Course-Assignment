@@ -1,70 +1,107 @@
-# Getting Started with Create React App
+# JavaScript Frameworks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Goal
 
-## Available Scripts
+Utilize React skills to develop an eCommerce store. Refer to the details outlined below.
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+TigerShop is a simulated e-commerce store featuring cart functionality and a mock checkout process. It manages the cart using context and a reducer for state management.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Context is a React feature that allows you to share data between components without passing props manually through each level. In this project, it's used in the CartContext.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Reducer is a function that manages state changes in a predictable way. It takes the current state and an action, and returns a new state.
 
-### `npm test`
+The reducer handles different actions like:
+INITIALIZE_CART
+ADD_TO_CART
+INCREASE_QUANTITY
+DECREASE_QUANTITY
+CLEAR_CART
+Together, Context and Reducer work like this in the cart functionality:
+The CartContext provides cart data to all components
+When you want to update the cart (like adding an item), you dispatch an action
+The reducer processes that action and updates the cart state
+The new cart state is then available to all components through the context
+This pattern (Context + Reducer) is commonly used for state management in React applications, especially for features like shopping carts.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Deployment
 
-### `npm run build`
+--netflity link--
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Built With
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Vite
+- React
+- React-Router-DOM
+- Styled-Components
+- Fontawesome
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+For installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```
+npm i
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+For building Vite project
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+npm run build
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+For development mode
 
-## Learn More
+```
+npm run dev
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+For development mode on network
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+npm run network
+```
 
-### Code Splitting
+For running eslint
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm run lint
+```
 
-### Analyzing the Bundle Size
+## Brief
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+You are tasked with build out the following pages for an eCom store:
 
-### Making a Progressive Web App
+Homepage
+Individual product page
+Cart page
+Checkout success page
+Contact page
+The Homepage should have a list of all the products. There should be a look-ahead search bar that filters products when typing in a product name. Clicking on a product should take a user to an individual product page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You pages should use a <Layout> component that contains a header and footer. The header should contain a nav bar as well as a Cart icon component that acts as a button as well as displays the current number of items in the cart.
 
-### Advanced Configuration
+The individual product page should display data for a single product. There should be an Add to cart button which, upon clicking, adds the product to the cart. The product page should display the title of the product, the description and the image. There should also be reviews listed for the product, if there are any. You should use the discountedPrice property to display the price of the product. If there is a difference between the discountedPrice and price properties then that means there is a discount for that product. Calculate what this discount is and display it on the page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Clicking on the Cart icon will load the Cart page, which will list all of the products as well as a total. The Cart page will have a Checkout button. Clicking this Checkout button then goes to a Checkout success page.
 
-### Deployment
+The Checkout success page will display a message to the user notifying them that their order was successful. There should also be a link that lets a user go back to the store. The cart must be cleared if the user gets to the Checkout success page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+There will be a contact page which will contain a contact form with the following fields. There must be form validation:
 
-### `npm run build` fails to minify
+Full name (Minimum number of characters is 3, required)
+Subject (Minimum number of characters is 3, required)
+Email (Must be a valid email address, required)
+Body (Minimum number of characters is 3, required)
+You will be using React Router to switch between pages.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Your design should be responsive. You are welcome to use a CSS Framework, however, you’re encouraged to design from scratch and use styled-components or CSS Modules.
+
+You are not required to use TypeScript.
+
+Your code is expected to be clean and well-formatted.
+
+## Contact
+
+[email](mailto:arnasbalciunas@gmail.com)
